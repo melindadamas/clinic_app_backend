@@ -1,7 +1,20 @@
-django>=5.0,<5.3  # Ou a versão específica do Django que você está usando
+django>=5.2.0
+channels>=4.0.0
+channels_redis>=4.1.0
+djangorestframework>=3.14.0
+djangorestframework-simplejwt>=5.3.0
+django-cors-headers>=4.3.0
+redis>=5.0.0
+python-dotenv>=1.0.0
+django-filter>=23.5
+drf-yasg>=1.21.7
+gunicorn>=21.2.0
+whitenoise>=6.6.0
+psycopg[binary]>=3.1.18
+dj-database-url>=2.1.0
 
-# Para servir a aplicação em produção
-gunicorn
+# Para ler a DATABASE_URL do ambiente
+dj-database-url
 
 # Para conectar ao PostgreSQL
 psycopg[binary] # Ou psycopg2-binary se preferir
@@ -11,10 +24,6 @@ dj-database-url
 
 # Para servir arquivos estáticos em produção
 whitenoise[brotli]
-
-# Para Django REST framework e JWT (se estiver usando para APIs)
-djangorestframework
-djangorestframework-simplejwt
 
 # Para CORS (Cross-Origin Resource Sharing)
 django-cors-headers

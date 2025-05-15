@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.13-slim
+ARG PYTHON_VERSION=3.11-slim
 
 FROM python:${PYTHON_VERSION}
 
@@ -22,7 +22,7 @@ RUN set -ex && \
     rm -rf /root/.cache/
 COPY . /code
 
-ENV SECRET_KEY "QY81lzCY4ILDxMrw5d6qZ0zMat6F2W7g5Kf5NA782f4ylHRy0T"
+# Collect static files
 RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
